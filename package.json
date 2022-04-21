@@ -23,15 +23,11 @@
     "build": "webpack",
     "watch": "webpack --mode=development -w",
     "package": "vsce package --yarn",
-    "browser": "vscode-test-web --sourcesPath=$HOME/Projects/vscode --extensionDevelopmentPath=. ."
-  },
-  "dependencies": {
-    "@vscode/webview-ui-toolkit": "^0.9.1"
+    "browser": "vscode-test-web --sourcesPath=/proj/vscode --extensionDevelopmentPath=. ."
   },
   "devDependencies": {
     "@types/node": "^12.20.0",
     "@types/vscode": "^1.50.0",
-    "@types/vscode-webview": "^1.57.0",
     "@types/w3c-web-usb": "^1.0.6",
     "@vscode/test-web": "^0.0.22",
     "copy-webpack-plugin": "^10.2.4",
@@ -47,26 +43,7 @@
         "command": "webusb.listDevices",
         "title": "WebUSB: List Devices"
       }
-    ],
-    "viewsContainers": {
-      "activitybar": [
-        {
-          "id": "webusb",
-          "title": "WebUSB",
-          "icon": "$(preview)"
-        }
-      ]
-    },
-    "views": {
-      "webusb": [
-        {
-          "id": "webusb.webview",
-          "type": "webview",
-          "name": "WebUSB",
-          "icon": "$(preview)"
-        }
-      ]
-    }
+    ]
   },
   "activationEvents": [
     "*"

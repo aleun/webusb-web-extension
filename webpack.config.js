@@ -33,26 +33,6 @@ const config = [
             libraryTarget: 'commonjs'
         }
     },
-    {
-        ...common,
-        target: 'web',
-        entry: {
-            devices: './src/views/webusb-view.ts'
-        },
-        output: {
-            filename: '[name].js',
-            path: path.resolve(__dirname, 'dist', 'views')
-        },
-        plugins: [
-            new copy({
-                patterns: [
-                    {
-                        from: 'node_modules/@vscode/webview-ui-toolkit/dist/toolkit.min.js'
-                    }
-                ]
-            })
-        ]
-    }
 ];
 
 module.exports = (_env, argv) => {
